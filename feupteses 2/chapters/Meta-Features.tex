@@ -1,0 +1,326 @@
+\chapter{Meta Features}
+\label{chap:mf}
+%The prefix ‘meta’ is of Greek origin and means ‘among’, ‘after’, ‘beside’ or ‘with’.
+%Meta-features, describe properties of the data which are predictive for the performance of machine learning algorithms trained on them.
+%Feature subset selection (FSS) plays an important role in the fields of data mining and machine learning. A good FSS algorithm can effectively remove irrelevant and redundant features and take into account feature interaction. Although a large number of FSS algorithms have been proposed, there is no single algorithm which performs uniformly well on all feature selection problems. The most commonly used meta-features are established focusing on the following three aspects of a data set: i) general properties, ii) statistic-based properties, and iii) information- theoretic based properties
+%The meta-features, also called characterization measures, are able to characterize the complexity of datasets and to provide estimates of algorithm performance.
+%The definition of a dataset is a simple one. Datasets are collections of data; as data differs, datasets also differ, having different characteristics. Several studies were made to examine these characteristics and recognise patterns\cite{reif2014automatic}. 
+Datasets are data collections; as data differs, datasets also change, having different characteristics. The 'meta' prefix is of Greek origin and means 'among,' 'after,' 'beside' or 'with,' and is often used to identify something that provides information about something else, naming the collection of those characteristics inside the datasets meta features \citep{binder2015analysis}.
+
+Several authors have studied meta features \citep{reif2014automatic}. However, a uniform description of meta features does not exist. Many studies diverge on selecting characteristics to construct their meta feature definition \citep{rivolli2019characterizing}. The reproduction and comparison of said studies are therefore complex and abstract. A meta feature should not be too difficult to calculate \citep{10.1007/11526018_45}.
+
+Meta features are helpful when looking at MLMs as they depict properties of the data, which are predictive of ML algorithms' performance \citep{9640223}. By choosing datasets with a particular assortment of meta features, more valuable data will be analyzed and processed, reducing the use of irrelevant and redundant data.
+%One of the main challenges faced when studying meta-features is there forth identified.
+
+Several studies use simple datasets or only focus on purely mathematical distribution-based datasets. While mathematical meta features are valuable \citep{KANDA2016393}, even if datasets with those exact meta features had positive results when applied to the corresponding studies, the same does not apply to a generator. A generator containing only a selection of simple meta features would not be helpful for most cases.
+
+However, analysis of several studies revealed some, even if small, agreeance on some datasets commonly used. It led to the extrapolation of three families: general, statistic-based, and information theoretic-based meta features \citep{reif2012dataset, DBLP:journals/corr/WangSSZXZ14}. General meta features can be directly observable from datasets, statistical use mathematical distributions to describe data distribution, and information-theoretic uses data entropy. Some other studies also included the model-based (usually based on properties of decision trees) and landmarking (use the performance of fast and straightforward learning algorithms to characterize datasets) families \citep{rivolli2019characterizing, 7382962}. In this chapter, we took a look at various sets of commonly used meta features, creating a collected list of features that can be useful in analyzing datasets. %The main objective is to collect and present a list of meta-features to be used later during the development phase of this study. 
+
+\section{General Meta Features}
+
+\begin{table}[h!]
+\centering
+\caption{General Meta Features}
+\setlength{\tabcolsep}{8pt}
+	\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ll}
+    \hline
+    Acronym & Meaning  \\ \hline
+    nrAttr & number of attributes \\
+    nrBin & number of binary attributes \\ 
+    nrCat & number of categorical attributes \\
+    nrNum & number of numeric attributes \\
+    numToCat & proportion of numerical to categorical attributes\\
+    catToNum & proportion of categorical to numerical attributes \\
+    nrInst & number of instances\\
+    nrClass & number of classes\\
+    attrToInst & proportion of number of attributes to number of instances\\
+    instToAttr & proportion of number of instances to number of attributes\\
+    classToAttr & number of classes per attribute\\
+    instToClass & number or instances per class\\
+    freqClass & frequency of instances in each class\\
+    nrAttrMissing & number of missing attributes\\
+    nrInstMissing & number of missing instances\\
+    nrMissing & total missing number \\
+    \hline
+    \end{tabular}
+\label{tab:general-mf}
+\end{table}
+
+General meta features are directly observable from the dataset, representing basic information and being the most explicit set regarding computation cost. To a certain extent, they are devised to estimate the complexity of the problem related to that dataset \citep{bilalli2017predictive}.
+
+The measures suggested in Table \ref{tab:general-mf} represent concepts connected to the number of predictive attributes, instances, target classes, and missing values. These measures are relevant to illustrating a dataset's main aspects, delivering knowledge that can support the selection of a dataset for a particular learning task. Most of these measurements are self-explanatory.
+
+It should be explained that the \textit{nrAttrMissing} and \textit{nrInstMissing}, although looking similar, represent different aspects of the same problem. \textit{nrAttrMissing} represents the number of empty columns in a dataset, counting the currently missing attributes. \textit{nrInstMissing} on the other hand, represents the number of entries (rows) that are empty.
+
+While most meta features are synonymous with a straightforward examination, others can provide additional connotation: \textit{AttrToInst} helps analysing the dimension of the dataset and \textit{instToAttri} illustrates the absence of data; a diminutive value of \textit{instToAtrrib} can support the detection of overfitting issues on a MLM; \textit{freqClass} values allow the extraction of suitable measures, such as the standard deviation of the class distribution and \textit{missing-type} values help evaluate the quality of the dataset \citep{lindner1999ast}.
+
+\section{Statistical Meta Features}
+
+\begin{table}[h!]
+\centering
+\caption{Statistical Meta Features}
+\setlength{\tabcolsep}{8pt}
+	\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ll}
+    \hline
+    Acronym & Meaning \\ \hline
+    cor & correlation \\
+    cov & covariance \\
+    nrCorAttr & proportion of highly correlated attribute pairs \\
+    gMean & geometric mean \\
+    hMean & harmonic mean \\
+    tMean &  trimmed mean \\
+    mean & - \\
+    median & - \\
+    mad & median absolute deviation \\
+    max & maximum \\
+    min & minimum \\
+    range & - \\
+    iqRange & interquartile range \\
+    kurtosis & - \\
+    sd & standard deviation \\
+    skewness & - \\ 
+    var & variance\\
+    nrNorm & normality of the attributes \\
+    nrOutliers & number of attributes that contain outliers \\
+    canCor & canonical correlations\\
+    nrDisc & number of discriminant values\\
+    sdRatio & homogeneity of covariances\\
+    wLambda & Wilks lambda\\
+    \hline
+    \end{tabular}
+\label{tab:stat-mf}
+\end{table}
+
+Statistical meta features extract details about the performance of statistical algorithms or data distribution \citep{michie1994machine}. They are the most extensive and diversified group of meta features and represent attribute statistics of a dataset \citep{bilalli2017predictive}. Statistical measures are deterministic and support only numerical attributes. Datasets that hold categorical data must be either partially dismissed or edited and transformed to numerical values \citep{rivolli2022meta}. Table \ref{tab:stat-mf} presents a list of statistical meta features.
+
+Most statistical features are extracted per attribute individually. The measures of central tendency (a single value that attempts to describe a set of data by identifying the central position within that set of data \citep{weisberg1992central}) consist of the \textit{mean} (and its variations) and the \textit{median}. 
+
+Correlation (\textit{cor}) and covariance (\textit{cov}) mirror the interdependence of the attributes. Elevated values are associated with a high grade of redundancy in the data. 
+
+Measures of dispersion depict the spread of the data. Those measures are represented by kurtosis, range, standard deviation (sd), the interquartile range (iqRange), maximum (max), median absolute deviation (mad), and minimum (min) skewness and variance (var). The values of \textit{Kurtosis} and \textit{skewness} are appropriate for grasping the normalcy of the data \citep{vanschoren2010understanding}.
+
+The nrNorm value echoes the count of normally distributed attributes in the dataset. nrOutliers, on the other hand, measure the number of visible outliers. Both values can impact the behaviour of MLMs algorithms.
+
+The discriminant statistical measures categorise observations into non-overlapping sets \citep{mclachlan2005discriminant}. They are represented by \textit{nrDisc}, \textit{sdRatio} and \textit{wLambda}. These meta features present some specifics regarding the datasets and are exclusively used in classification assignments.
+
+
+\section{Information-Theoretic Meta Features}
+\begin{table}[h!]
+\centering
+\caption{Information-Theoretic  Meta Features}
+\setlength{\tabcolsep}{8pt}
+	\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ll}
+    \hline
+    Acronym & Meaning \\ \hline
+    attrEnt & entropy of the predictive attributes\\
+    classEnt & entropy of the target values\\
+    eqNumAttr & equivalent number of attributes\\
+    jointEnt & joint entropy\\
+    mutInf & mutual information\\
+    nsRatio & noise signal ratio\\
+    \hline
+    \end{tabular}
+\label{tab:information-theoretic-mf}
+\end{table}
+
+Information-theoretic meta features, presented in Table \ref{tab:information-theoretic-mf}, illustrate the quantity of information in the data. Most of them are limited to expressing classification problems. In fact, from the meta features presented, only the entropy of the predictive attributes (attrEnt) can be used in other tasks. 
+
+Information-theoretic meta features are robust, deterministic and directly computed. Semantically, they represent the variability and redundancy of the predictive attributes to describe the classes \citep{rivolli2019characterizing}.
+
+The entropy of the predictive attributes (\textit{attrEnt}) represents the average uncertainty of the predicative attributes. This meta feature outlines the capacity for class discrimination in the dataset. The entropy of the target values (\textit{classEnt}) does the same regarding the class attributes \citep{segrera2008information}. It represents the amount of data needed to specify one class.
+
+The joint entropy meta feature (\textit{jointEnt}) displays the relative significance of the attributes in the mather of representation. On the other hand, mutual information meta features (\textit{mutInf}) represent the common information in the attributes, correlating to the degree of interdependence.
+
+Lastly, the equivalent number of attributes (\textit{eqNumAttr}) echoes the lowest number of attributes necessary to represent the target attribute. At the same time, the noise signal ratio (\textit{nsRatio}) refers to the percentage of irrelevant data in the dataset.
+
+\section{Model-Based Meta Features}
+\begin{table}[h!]
+\centering
+\caption{Model-Based Meta Features}
+	\setlength{\tabcolsep}{8pt}
+	\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ll}
+    \hline
+    Acronym & Meaning \\ \hline
+    leaves & number of leaves\\
+    leavesBranch & number of distinct paths \\
+    leavesCorrob & support described in the proportion of training instances to the leaf\\
+    leavesHomo & distribution of the leaves in the tree\\
+    leavesPerClass & proportion of leaves to the classes\\
+    nodes & number of nodes\\
+    nodesPerAttr & proportion of nodes per attribute\\
+    nodesPerInst & proportion of nodes per instance\\
+    nodesPerLevel & number of nodes per level\\
+    nodesRepeated & number of repeated nodes\\
+    treeDepth & depth of each node and leaf\\
+    treeImbalance & degree of imbalance in the tree\\
+    treeShape & shape of the tree\\
+    varImportance & importance of each attribute\\
+    \hline
+    \end{tabular}
+\label{tab:model-based-mf}
+\end{table}
+Meta features based on models consist of information extracted from a predictive learning model -usually a Decision Tree (DT) model- that characterises the dataset by the complexity of such model. The number of leaves, nodes and shape of the tree are factors that represent the complexity. Table \ref{tab:model-based-mf} shows the Decision Tree model meta features.
+
+\textit{Leaf}-based attributes measure the orthogonal complexity of the decision surface. Some measures result in a value for each leaf. Those measures are the number of distinct paths (\textit{leavesBranch}), the support described in the proportion of training instances to the leaf (\textit{leavesCorrob}) and the distribution of the leaves in the tree (\textit{leavesHomo}). The ratio of leaves to the classes (\textit{leavesPerClass}) represents the classes' complexity.
+
+\textit{Node}-related features extract information about the balance of the tree to describe the discriminatory power of attributes. The proportion of nodes per attribute (\textit{nodesPerAttr}) and nodes per instance (\textit{nodesPerInst}) result in singular values. The number of nodes per level (\textit{nodesPerLevel}) describes how many nodes are present on each level. The number of repeated nodes (\textit{nodesRepeated}) represents the number of nodes associated with each attribute used for the model. These last two meta features have each node at its maximum value.
+
+The estimates based on the tree size extract details around the leaves and nodes to depict the data complexity. The tree depth (\textit{treeDepth}) illustrates the depth of each node and leaf. The tree imbalance (\textit{treeImbalance}) describes the degree of inequality in the tree. The shape of the tree (\textit{treeShape}) symbolises the entropy of the probabilities of randomly reaching a specific leaf in a tree from each one of the nodes.
+
+The importance of each attribute (\textit{varImportance}) represents the amount of information present in the attributes before a node split operation.
+
+All the meta features presented in this section are helpful when exclusively looking at DT models. Meta features related to k-Nearest Neighbour (kNN) and Perceptron neural networks exist but were not further explored when producing this investigation.
+%talk about other model based meta features k-nn, perceptron neurals
+
+\section{Landmarking Meta Features}
+\begin{table}[h!]
+\centering
+\caption{Landmarking Meta Features}
+	\setlength{\tabcolsep}{8pt}
+	\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ll}
+    \hline
+    Acronym & Algorithm \\ \hline
+    bestNode & Best Node\\
+    eliteNN & Elite Nearest Neighbor\\
+    linearDiscr & Linear Discriminant\\
+    naiveBayes & Naive Bayes\\
+    oneNN & One Nearest Neighbor\\
+    randomNode & Randomnode\\
+    worstNode & Worst Node\\
+    \hline
+    \end{tabular}
+\label{tab:landmarking-mf}
+\end{table}
+Landmarking uses the execution of a collection of simple and swift algorithms to characterise datasets. In this section, we demonstrate some commonly used algorithms used for landmarking meta features: \textit{bestNode, eliteNN, linearDiscr, naiveBayes, oneNN, randomNode} and \textit{worstNode}, to those algorithms, we give the name of landmarkers. They are also presented in Table \ref{tab:landmarking-mf}. Moreover, it should be noted that the performance of any algorithm can be used as a landmarking meta feature.
+
+The performance of a DT model can be measured using single attributes to initialise the model. The landmarkers used in this case are \textit{bestNode}, \textit{randomNode} and \textit{worstNode}. In the first case, \textit{bestNode} employs the most informative attribute to initialise the model. The \textit{randomNode} algorithm utilises a random value of a node. Lastly, \textit{worstNode} uses the least informative attribute to initialise the model.
+
+The elite-Nearest Neighbor (\textit{eliteNN}) landmarker uses the kNN algorithm. In this algorithm, k is equal to one (making it a 1NN) and results from the k-NN model using a subset of the most informative attributes in the dataset. In contrast, the one-Nearest Neighbor (\textit{oneNN}) results from a similar learning model induced with all attributes in the dataset \citep{kramer2013k}.
+
+The Linear Discriminant (\textit{linearDiscr}) and the Naive Bayes (\textit{naiveBayes}) algorithms use all attributes to induce the learning models. The first technique finds the best linear combination of predictive attributes to maximise class separability. The second technique is based on Bayes' theorem. It calculates, for each feature, the probability of an instance to belong to each class.
+
+Besides the ones described before, relative and subsampling landmarking also exit. On relative landmarkings, a pairwise comparison is used instead of the algorithm's performance. In this case, the meta feature indicates the winner, the difference between them, or the two performances' ratio. Subsampling landmarking works by applying the algorithms mentioned before to the original dataset's smaller set (a subsample).
+
+\section{Other Meta Features}
+\label{sec:omf}
+Presented before were the most common and useful meta features described multiple times in literature. However, many others exist and can be helpful in particular scenarios \citep{rivolli2022meta}. Some of these meta feature groups include \textit{clustering and distance}, \textit{complexity}, \textit{data distribution}, \textit{case-based}, \textit{concept-based}, \textit{structural information} and \textit{time-based measures}.
+
+\subsection{Clustering Meta Features}
+\begin{table}[h!]
+\centering
+\caption{Clustering Meta Features}
+	\setlength{\tabcolsep}{8pt}
+	\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ll}
+    \hline
+    Acronym & Meaning \\ \hline
+    compactness & how close the clusters are\\
+    connectivity &  local densities\\
+    nrClusters &  number of clusters\\
+    nre &  normalised relative entropy\\
+    purityRatio & ratio of clusters that contain instances related to each class\\
+    sizeDist & allocation of the clusters\\
+    \hline
+    \end{tabular}
+\label{tab:clustering-mf}
+\end{table}
+\textit{Clustering} measures (Table \ref{tab:clustering-mf}) characterise the space, splitting it into clusters.  The clustering partitions can be defined by the distance between the instances, their density or particular data distribution. These partitions are evaluated by both clustering algorithms and measures used to calculate the distance between instances. Predictive attributes are used to calculate these measures as they are commonly used in unsupervised problems. 
+
+Clustering meta features include: \textit{compactness}, \textit{connectivity}, \textit{nrClusters}, \textit{nre}, \textit{purityRatio} and \textit{sizeDist}.
+
+The quality of the partitions can be obtained by looking at different validations. The compactness and connectivity are excellent examples. \textit{Compactness} calculates how close the clusters are, with lower values denoting tighter groups. \textit{Connectivity} demonstrates local densities by calculating the infringements of the nearest-neighbour relationship between instances in different partitions.
+
+Given the data partition produced by a clustering algorithm, \textit{nrCluster} represents the number of clusters. When a clustering algorithm is used and the clusters are defined dynamically, this simple informative measure becomes more valuable to calculate. This doesn't happen in cases where the number of clusters becomes an input parameter specified by the user.
+
+The distribution of instances among the clusters is analysed by the normalised relative entropy (\textit{nre}). This value indicates how uniform the instances are distributed. Values close to zero reveal well-distributed clusters.
+
+The value of \textit{purityRatio} looks at the instances’ classes to evaluate the partitions. The purityRation is calculated for each class and captures the ratio of clusters that contain instances related to the respective class. Datasets with high values are more complex than those with low values.
+
+The measure \textit{sizeDist} grabs the allocation of the clusters based on the instances’ frequency. As glimpsed in \cite{ler2018algorithm}, a distribution skewed to the right reveals a complex dataset.
+
+One of the main obstacles in using these meta features is their high computational complexity, which restricts their use. Additionally, they allow a wide range of choices, with different impacts on the value returned. Despite being able to provide a good characterization, clustering measures are under-explored in the meta feature field.
+
+\subsubsection{Complexity Meta Features}
+
+\cite{ho2002complexity} proposed \textit{Complexity}-based meta features and used them to capture the underlying difficulty of classification tasks. They analyse things like class overlapping, the density of manifolds and the shape of decision boundaries, among other aspects of the dataset. The meta features presented below were first extrapolated by \cite{rivolli2022meta} that divided them into five measures: feature-based, linearity, neighbourhood, network, and dimensionality. A list of this type of meta features can be found in Table \ref{tab:complexity-mf}.
+
+\begin{table}[!h]
+    \centering
+    \caption{Complexity Meta Features}
+        \setlength{\tabcolsep}{8pt}
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{ll}
+        \hline
+        Meta feature & Type \\ \hline
+        maximum Fisher’s discriminant ratio & feature-based\\
+        directional-vector maximum Fisher’s discriminant ratio & feature-based\\
+        volume of the overlapping region & feature-based\\
+        maximum individual feature efficiency & feature-based\\
+        collective feature efficiency & feature-based\\
+        sum of the error distance by linear programming & linearity\\
+        error rate of linear classifier & linearity\\
+        non-linearity of a linear classifier & linearity\\
+        fractions of Borderline Points & neighbourhood\\ 
+        ratio of intra/extra class nearest neighbour distance & neighbourhood\\ 
+        error rate of the nearest neighbour classifier & neighbourhood\\ 
+        non-Linearity of the nearest neighbour classifier & neighbourhood\\ 
+        the fraction of hyperspheres covering data & neighbourhood\\ 
+        local set average cardinality & neighbourhood\\ 
+        average density & network\\
+        hub score & network\\
+        average number of points per dimension & dimensionality\\
+        the average number of points per PCA dimension & dimensionality\\
+        the ratio of the PCA & dimensionality\\
+        dimension to the original dimension & dimensionality\\
+        \hline
+        \end{tabular}
+    \label{tab:complexity-mf}
+    \end{table}
+
+    Feature overlapping measures illustrate how informative the predictive attributes are. There are five measures of this kind: maximum Fisher’s discriminant ratio, directional-vector maximum Fisher’s discriminant ratio, the volume of the overlapping region, maximum individual feature efficiency and collective feature efficiency. The complexity is low if at least one predictive attribute can separate the classes.
+
+Linearity measures quantify whether the classes are linearly split. They incorporate the sum of the error distance by linear programming, the error rate of the linear classifier and the non-linearity of a linear classifier.
+
+Neighbourhood measures explore the vicinities of singular examples and capture class overlapping and the shape of the decision boundary. These measures include the fractions of Borderline Points, the ratio of intra/extra class nearest neighbour distance, the error rate of the nearest neighbour classifier, the non-Linearity of the nearest neighbour classifier, the fraction of hyperspheres covering data, and the local set average cardinality.
+
+The network measures convert a dataset into a graph and pull structural and statistical information. Each example from the dataset corresponds to a node, while undirected edges connect examples and are weighted by their distances. These measures contain the average density of the network and Hub score.
+
+Lastly, the dimensionality measures assess data sparsity according to the number of instances compared to the predictive attributes of the dataset. The measures include the average number of points per dimension, the average number of points per Principal Component Analysis (PCA) dimension, the ratio of the PCA and dimension to the original dimension.
+
+The network measures convert a dataset into a graph and pull structural and statistical information. Each example from the dataset corresponds to a node, while undirected edges connect examples and are weighted by their distances. These measures contain the average density of the network and Hub score.
+
+\subsection{Data Distribution Meta Features}
+\textit{Data distribution} measures assess how the data is distributed in the predictive attribute space. 
+
+One of these measures is the concentration coefficient. This coefficient can be applied per pair of attributes and for each attribute and the class. It represents the association strength between each pair of attributes and the predictive and target attributes.
+
+Two more meta features exist in this group: the proportion of principal components that explain a specific dataset variance, used for capturing the redundancy of predictive attributes, and the sparsity, used for indicating the variance in the values of the attributes.
+
+\subsection{Case-based Meta Features}
+\textit{Case-based} measures examine the dataset, comparing its instances among themselves. The objective is to identify properties that might make the learning process more complex \citep{kopf2002combination} such as inconsistency, incoherence and uniqueness making the meta features included in this group \textit{consistencyRatio}, \textit{uniquenessRatio} and \textit{incoherenceRatio}.
+
+The \textit{consistencyRatio} quantifies the balance of replicated instances with different targets, where zero is an ideal value.
+
+The \textit{uniquenessRatio} is an abstraction of consistencyRatio, using only the predictive attributes.
+
+The \textit{incoherenceRatio} meta feature calculates the proportion of instances that do not overlap with other instances in a predefined number of attributes. Values nearest to 1 are favoured in a dataset, indicating the scattered instances.
+
+\subsection{Concept-based Meta Features}
+The concept-based measures characterize the irregularity of the input-output distribution \citep{perez1996learning}. "An irregular distribution is observed when neighbouring instances have distinct target values" (cited from \cite{munoz2018instance}). Meta features in this group include the \textit{weighted distance}, \textit{cohesiveness} and \textit{concept variation}.
+
+The \textit{weighted distance} displays how dense or sparse the distribution of the instances is. The \textit{cohesiveness} gauges the density of the example distribution. Lastly, the \textit{concept variation} is defined by the cohesiveness average of all possible instances in the input space.
+
+\subsection{Structural Information Meta Features}
+Structural information meta features are helpful when it comes to exploring similarities between datasets \citep{wang2015improved}. They characterise binary item sets to apprehend the allocation of values of both single attributes (\textit{oneItemset}) and pairs of attributes (\textit{twoItemset}). 
+
+The value of \textit{oneItemset} captures each individual’s attributes, whereas \textit{twoItemset} displays possible correlations concerning pairs of attributes.
+
+\subsection{Time-based Meta Features}
+Time-based measures use elapsed time to characterize the datasets \citep{reif2011prediction}. It should be noted that these meta features are very hardware dependent as a difference in computational power can change the results.
+
+With this family, we conclude our collection of meta features. Later, in Chapter \ref{chap:class} we provide a new list depicting the selected meta features in the extraction process. A subset of the General, Statistical, Information-theoretic, Model-based, Landmarking, Clustering, Concept, Itemset and Complexity meta feature families were used. 
