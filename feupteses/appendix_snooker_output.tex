@@ -1,0 +1,17 @@
+\chapter{SNOOKER Synthetic Dataset} \label{ap3:snooker}
+In this appendix, we will look at the final output from SNOOKER’s generation process, explaining the information in each dataset column. Columns can be classified as primary and secondary. While primary columns display information essential for the dataset, secondary columns facilitate debugging actions. Other columns exist when generating datasets for different ends. Still, the study and analysed are based only on the helpdesk dataset type output. When looking at the 1st line of the CSV file (the header), we can extract all the columns that will be analysed:
+
+\begin{lstlisting}[breaklines=true]
+  ID; Location; Raised (UTC); Allocated; Stages; Fixed; Client; Family; Family Action; Subfamily; Subfamily Action; Subfamily Action Duration; Team; Users in the Shift; Users Next Shift; Users Competent; User actions; User Chosen; Action Chosen; Action Chosen Status; Action Chosen Duration; Action Chosen (With Outlier); Ticket Duration; Escalate; Status; Outlier
+
+\end{lstlisting}
+
+The first column displays the ticket's ID, a unique numerical identifier; in this case, the ID is also the ticket's number. The second column contains the location of the ticket (its country of origin). Raised (UTC) displays the DateTime the ticket was submitted in UTC format. At the same time, the next column (Allocated) does the same for the time the ticket was allocated to a helpdesk team member. 
+
+Stages register many timestamps concerning the ticket treatment. Fixed, like Allocated did before, keeps the DateTime tickets solved. The next metric is simple: the Client column gives information regarding the client the ticket belongs to.
+
+Family, Family Action, Subfamily and Subfamily Action characteristics keep information regarding the nature of the incident that caused that ticket. The Actions metrics save the techniques usually used to solve those problems. Lastly, the Subfamily Action Duration illustrates the time needed to perform the actions presented in the Subfamily Action column.
+
+Team, Users in the Shift and Users Next Shift give information regarding the team management, the current team, its active members and the members that will become available during the next shift, respectively. Users competent present a list of the most suitable member to perform the task. The User actions column contains data regarding the action that each available user would perform. User Chosen presents us with the team member that will take care of the ticket. Action Chosen reflects the action chosen to fix the incident, followed by the Action Chosen Status that represents the status of the action chosen. Action Chosen Duration and Action Chosen Duration (With Outlier) display the action's duration and duration if an outlier exists.
+
+The final four columns are Ticket Duration, Escalate, Status and Outlier. The first one depicts the time the ticket has endured without being solved, followed by Escalate, responsible for informing the user that the ticket should be passed to the next team. The Status column provides the ticket status (Closed or Transferred). Finally, the Outlier notifies us if the ticket should be considered an outlier.
