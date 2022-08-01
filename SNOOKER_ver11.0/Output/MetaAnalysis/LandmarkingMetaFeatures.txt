@@ -1,0 +1,16 @@
+Landmarking MetaFeature Analysis of file in /Users/joaolemos/Desktop/test_numb.csv at 2022-06-03 13:18:30.522502.
+best_node.mean                                                                nan
+best_node.sd                                                                  nan
+elite_nn.mean                                                                 nan
+elite_nn.sd                                                                   nan
+linear_discr.mean                                                             nan
+linear_discr.sd                                                               nan
+naive_bayes.mean                                                              nan
+naive_bayes.sd                                                                nan
+one_nn.mean                                                                   nan
+one_nn.sd                                                                     nan
+random_node.mean                                                              nan
+random_node.sd                                                                nan
+worst_node.mean                                                               nan
+worst_node.sd                                                                 nan
+Analysis took 0:00:00.023667.

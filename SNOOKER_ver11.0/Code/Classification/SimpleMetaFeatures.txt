@@ -1,0 +1,9 @@
+Column count: 26.
+Row count: 60237.
+Attribute count: 1566162.
+Booleans: 120474.
+Numeric: 421659.
+Categorical: 843318.
+Missing data: 0.
+catToNum: 2.0.
+numToCat: 0.5.

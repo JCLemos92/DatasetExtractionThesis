@@ -1,0 +1,549 @@
+standard_generation_parameters:
+  train_ticket: 30000
+  families_number: 7
+  minsubfamilies_number: 1
+  maxsubfamilies_number: 11
+  techniques_number: 7
+  minsubtechniques_number: 3
+  maxsubtechniques_number: 4
+incident_area:
+  Cybersecurity:
+    0:
+      type: Abusive Content
+      prob: 12/292
+    1:
+      type: Availability
+      prob: 18/292
+    2:
+      type: Information Gathering
+      prob: 53/292
+    3:
+      type: Information Security
+      prob: 11/292
+    4:
+      type: Intrusion Attempts
+      prob: 50/292
+    5:
+      type: Intrusions
+      prob: 33/292
+    6:
+      type: Malicious Code
+      prob: 23/292
+    7:
+      type: Undefined
+      prob: 2/292
+    8:
+      type: No Area
+      prob: 90/292
+teams_info_pool:
+  L1:
+  - Jose
+  - Manuel
+  - Matilde
+  - Catarina
+  - Carolina
+  - Pedro
+  - Joao
+  - Tiago
+  - Ana
+  - Helder
+  - Leo
+  - Carlos
+  L2:
+  - Eduardo
+  - Sofia
+  - Marisa
+  - Luis
+  - Edgar
+  L3:
+  - Leonardo
+  - Dulce
+  - Diogo
+  - Fabio
+  L4:
+  - Andre
+  - Daniel
+  - Lila
+
+analysts_skills:
+  L1:
+    Manuel:
+      shift: 1
+      days off: Friday
+    Jose:
+      shift: 2
+      days off: Sunday
+    Leo:
+      shift: 0
+      days off: Monday
+    Carlos:
+      shift: 1
+      days off: Tuesday
+    Pedro:
+      shift: 2
+      days off: Thursday
+    Carolina:
+      shift: 0
+      days off: Wednesday
+    Helder:
+      shift: 1
+      days off: Saturday
+    Ana:
+      shift: 2
+      days off: Friday
+    Joao:
+      shift: 0
+      days off: Sunday
+    Tiago:
+      shift: 1
+      days off: Monday
+    Matilde:
+      shift: 2
+      days off: Tuesday
+    Catarina:
+      shift: 0
+      days off: Thursday
+  L2:
+    Edgar:
+      shift: 0
+      days off: Thursday
+    Eduardo:
+      shift: 2
+      days off: Sunday
+    Sofia:
+      shift: 1
+      days off: Monday
+    Marisa:
+      shift: 0
+      days off: Tuesday
+    Luis:
+      shift: 2
+      days off: Friday
+  L3:
+    Fabio:
+      shift: 0
+      days off: Saturday
+    Dulce:
+      shift: 1
+      days off: Thursday
+    Diogo:
+      shift: 2
+      days off: Monday
+    Leonardo:
+      shift: 0
+      days off: Friday
+  L4:
+    Lila:
+      shift: 1
+      days off: Friday
+    Andre:
+      shift: 2
+      days off: Sunday
+    Daniel:
+      shift: 0
+      days off: Thursday
+teams_freq:
+  L1: 0.25
+  L2: 0.25
+  L3: 0.25
+  L4: 0.25
+suspicious_countries:
+  United States:
+    start: 00:00:00
+    end: 23:59:59
+    dayoff: []
+  China:
+    start: 00:00:00
+    end: 23:59:59
+    dayoff: []
+  Russia:
+    start: 00:00:00
+    end: 23:59:59
+    dayoff: []
+  United Kingdom:
+    start: 00:00:00
+    end: 23:59:59
+    dayoff: []
+  Japan:
+    start: 22:00:00
+    end: 07:00:00
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+  France:
+    start: 22:00:00
+    end: 07:00:00
+    dayoff:
+    - Monday
+    - Tuesday
+    - Friday
+  Netherlands:
+    start: 22:00:00
+    end: 08:00:00
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+  Germany:
+    start: 23:00:00
+    end: 07:00:00
+    dayoff:
+    - Monday
+    - Wednesday
+    - Thursday
+  Canada:
+    start: 22:00:00
+    end: 07:00:00
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+  Australia:
+    start: 00:00:00
+    end: 23:59:59
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+
+############# Time Data #############
+week_time:
+  0:
+    day: Monday
+    prob: 0.30
+  1:
+    day: Tuesday
+    prob: 0.10
+  2:
+    day: Wednesday
+    prob: 0.10
+  3:
+    day: Thursday
+    prob: 0.10
+  4:
+    day: Friday
+    prob: 0.10
+  5:
+    day: Saturday
+    prob: 0.20
+  6:
+    day: Sunday
+    prob: 0.10
+day_stages:
+  morning:
+    start: 05:00
+    end: 11:59
+  afternoon:
+    start: 12:00
+    end: 16:59
+  evening:
+    start: 17:00
+    end: 20:59
+  night:
+    start: 21:00
+    end: 04:59
+shifts:
+  0:
+    start: 00:00
+    end: 08:00
+  1:
+    start: 08:00
+    end: 16:00
+  2:
+    start: 16:00
+    end: 00:00
+family_time_4h:
+  0:
+    start: 00:00
+    end: 04:00
+    prob: 0.10
+  1:
+    start: 04:00
+    end: 08:00
+    prob: 0.10
+  2:
+    start: 08:00
+    end: 12:00
+    prob: 0.20
+  3:
+    start: 12:00
+    end: 16:00
+    prob: 0.25
+  4:
+    start: 16:00
+    end: 20:00
+    prob: 0.25
+  5:
+    start: 20:00
+    end: 23:59
+    prob: 0.10
+families_weights:
+- 1
+- 20
+- 28
+- 29
+- 30
+- 50
+- 72
+
+families:
+  A:
+    subtypes: 3
+    ip: true
+    real_family: IPS
+  B:
+    subtypes: 6
+    time shift: 3
+    time dev: 3
+    week shift: 1
+    week loc: 1
+    week dev: 1
+    time loc: 12.415307421034893
+    ip: false
+    real_family: MAIL
+  C:
+    subtypes: 8
+    time shift: 4
+    time dev: 3
+    week shift: 4
+    week loc: 4
+    week dev: 1
+    time loc: 19.31221087578001
+    ip: true
+    real_family: WAF
+  D:
+    subtypes: 6
+    time shift: 4
+    time dev: 3
+    week shift: 5
+    week loc: 5
+    week dev: 1
+    time loc: 17.997103913917503
+    ip: true
+    real_family: MAIL
+    action: FoAZ
+  E:
+    subtypes: 6
+    time shift: 0
+    time dev: 3
+    week shift: 4
+    week loc: 4
+    week dev: 1
+    time loc: 0.5953141646896909
+    ip: true
+    real_family: FIREWALL
+    action: FHZ
+  F:
+    subtypes: 4
+    time shift: 2
+    time dev: 3
+    week shift: 5
+    week loc: 5
+    week dev: 1
+    time loc: 8.211828826174697
+    ip: true
+    real_family: FIREWALL
+  G:
+    subtypes: 2
+    time shift: 3
+    time dev: 3
+    week shift: 2
+    week loc: 2
+    week dev: 1
+    time loc: 13.670305438967642
+    ip: false
+    real_family: WINDOWS
+  H:
+    subtypes: 3
+    time shift: 1
+    time dev: 3
+    week shift: 0
+    week loc: 0
+    week dev: 1
+    time loc: 5.1077344941726786
+    ip: true
+    real_family: WINDOWS
+    action: zT81
+  I:
+    subtypes: 8
+    time shift: 2
+    time dev: 3
+    week shift: 4
+    week loc: 4
+    week dev: 1
+    time loc: 9.420280013471066
+    ip: true
+    real_family: FIREWALL
+  J:
+    subtypes: 3
+    time shift: 0
+    time dev: 3
+    week shift: 1
+    week loc: 1
+    week dev: 1
+    time loc: 0.3946242736447312
+    ip: false
+    real_family: WINDOWS
+  K:
+    subtypes: 2
+    time shift: 1
+    time dev: 3
+    week shift: 0
+    week loc: 0
+    week dev: 1
+    time loc: 4.852774840150743
+    ip: false
+    real_family: WAF
+    action: z0GlZ
+  L:
+    subtypes: 1
+    time shift: 2
+    time dev: 3
+    week shift: 0
+    week loc: 0
+    week dev: 1
+    time loc: 8.124366633042923
+    ip: false
+    real_family: FIREWALL
+  M:
+    subtypes: 4
+    time shift: 2
+    time dev: 3
+    week shift: 4
+    week loc: 4
+    week dev: 1
+    time loc: 8.713128935705452
+    ip: true
+    real_family: WAF
+  N:
+    subtypes: 2
+    time shift: 0
+    time dev: 3
+    week shift: 1
+    week loc: 1
+    week dev: 1
+    time loc: 3.8168150551002196
+    ip: true
+    real_family: VPN
+    action: FhZ
+  O:
+    subtypes: 2
+    time shift: 3
+    time dev: 3
+    week shift: 4
+    week loc: 4
+    week dev: 1
+    time loc: 14.92041035740151
+    ip: false
+    real_family: ANTIVIRUS
+    action: z4YZ
+  P:
+    subtypes: 5
+    time shift: 4
+    time dev: 3
+    week shift: 3
+    week loc: 3
+    week dev: 1
+    time loc: 16.710404369666534
+    ip: true
+    real_family: WAF
+  Q:
+    subtypes: 6
+    time shift: 1
+    time dev: 3
+    week shift: 3
+    week loc: 3
+    week dev: 1
+    time loc: 7.383935806161164
+    ip: true
+    real_family: ANTIVIRUS
+  R:
+    subtypes: 7
+    time shift: 2
+    time dev: 3
+    week shift: 0
+    week loc: 0
+    week dev: 1
+    time loc: 10.125994258811753
+    ip: true
+    real_family: WAF
+  S:
+    subtypes: 2
+    time shift: 3
+    time dev: 3
+    week shift: 1
+    week loc: 1
+    week dev: 1
+    time loc: 13.9991249603621
+    ip: true
+    real_family: IPS
+    action: FB51
+  T:
+    subtypes: 8
+    time shift: 3
+    time dev: 3
+    week shift: 5
+    week loc: 5
+    week dev: 1
+    time loc: 14.26633465557214
+    ip: true
+    real_family: VPN
+  U:
+    subtypes: 5
+    time shift: 4
+    time dev: 3
+    week shift: 0
+    week loc: 0
+    week dev: 1
+    time loc: 16.29183511756117
+    ip: true
+    real_family: ANTIVIRUS
+  V:
+    subtypes: 1
+    time shift: 0
+    time dev: 3
+    week shift: 6
+    week loc: 6
+    week dev: 1
+    time loc: 3.446675103581314
+    ip: false
+    real_family: MAIL
+  X:
+    subtypes: 7
+    time shift: 1
+    time dev: 3
+    week shift: 4
+    week loc: 4
+    week dev: 1
+    time loc: 4.485259239804089
+    ip: true
+    real_family: IPS
+  Z:
+    subtypes: 2
+    time shift: 5
+    time dev: 3
+    week shift: 5
+    week loc: 5
+    week dev: 1
+    time loc: 22.83152745746565
+    ip: true
+    real_family: WAF
+priority_levels:
+- low
+- medium
+- high
+- critical
+
+############# IPs #############
+ips_pool:
+- IPv4Address
+- IPv6Address
+
+############# Areas #############
+# =============================================================================
+# start_date: "28-02-2021 1:30:00"
+# end_date: "10-03-2021 4:50:00"
+# =============================================================================
+start_date: 01-04-2020 17:01:00
+end_date: 30-04-2021 11:43:00

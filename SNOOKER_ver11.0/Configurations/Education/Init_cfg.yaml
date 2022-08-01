@@ -1,0 +1,374 @@
+standard_generation_parameters:
+    ticket_number: 10
+    families_number: 24
+    minsubfamilies_number: 1
+    maxsubfamilies_number: 5
+    techniques_number: 5
+    minsubtechniques_number: 2
+    maxsubtechniques_number: 3
+
+incident_area:
+    Education:
+        0:
+            type: Teste1
+            prob: 12/292
+        1: 
+            type: Teste2
+            prob: 18/292
+
+  
+############# Teams Data #############
+   
+teams_info_pool:
+    L1: 
+    - Jose, 
+    - Manuel
+    - Matilde
+    - Catarina
+    - Carolina
+    - Pedro
+    - Joao
+    L2:
+    - Jose
+    - Tiago
+    - Sofia
+    - Catarina
+    - Luis
+    - Pedro
+    - Ana
+    L3:
+    - Jose
+    - Leonardo
+    - Sofia
+    - Diogo
+    - Andre
+    - Ana
+    L4:
+    - Andre
+    - Helder
+    - Daniel
+    - Diogo
+    - Fabio
+    - Lila
+
+############# Days Data #############
+        
+week_days:
+    0: 
+      day: Monday
+      prob: 0.30
+    1:
+      day: Tuesday
+      prob: 0.10 
+    2: 
+      day: Wednesday
+      prob: 0.10 
+    3: 
+      day: Thursday
+      prob: 0.10 
+    4: 
+      day: Friday
+      prob: 0.10
+    5: 
+      day: Saturday
+      prob: 0.20 
+    6: 
+      day: Sunday
+      prob: 0.10
+
+############# Days Stages #############
+
+day_stages: 
+    morning: 
+        start: "05:00"
+        end: "11:59"
+    afternoon: 
+        start: "12:00"
+        end: "16:59"
+    evening: 
+        start: "17:00"
+        end: "20:59"
+    night:
+        start: "21:00"
+        end: "04:59"
+
+############# Shifts #############
+
+shifts: 
+    0: 
+        start: "00:00"
+        end: "08:00"
+    1: 
+        start: "08:00"
+        end: "16:00"
+    2: 
+        start: "16:00"
+        end: "00:00"
+         
+############# Family #############
+family_time_4h: 
+    0: 
+        start: "00:00"
+        end: "04:00"
+        prob: 0.10
+    1: 
+        start: "04:00"
+        end: "08:00"
+        prob: 0.10
+    2: 
+        start: "08:00"
+        end: "12:00"
+        prob: 0.20
+    3: 
+        start: "12:00"
+        end: "16:00"
+        prob: 0.25
+    4: 
+        start: "16:00"
+        end: "20:00"
+        prob: 0.25
+    5: 
+        start: "20:00"
+        end: "23:59"
+        prob: 0.10
+     
+families:
+    A: 
+        subtypes: 3
+        time shift: 2
+        time dev: 3
+        week shift: 0
+        week loc: 0
+        week dev: 1
+        time loc: 10.69816405903834
+        ip: True 
+    B: 
+        subtypes: 6
+        time shift: 3
+        time dev: 3
+        week shift: 1
+        week loc: 1
+        week dev: 1
+        time loc: 12.415307421034893
+        ip: False 
+    C: 
+        subtypes: 8
+        time shift: 4
+        time dev: 3
+        week shift: 4
+        week loc: 4
+        week dev: 1
+        time loc: 19.31221087578001
+        ip: True 
+    D: 
+        subtypes: 6
+        time shift: 4
+        time dev: 3
+        week shift: 5
+        week loc: 5
+        week dev: 1
+        time loc: 17.997103913917503
+        ip: True
+    E: 
+        subtypes: 6
+        time shift: 0
+        time dev: 3
+        week shift: 4
+        week loc: 4
+        week dev: 1
+        time loc: 0.5953141646896909
+        ip: True 
+    F: 
+        subtypes: 4
+        time shift: 2
+        time dev: 3
+        week shift: 5
+        week loc: 5
+        week dev: 1
+        time loc: 8.211828826174697
+        ip: True 
+    G:  
+        subtypes: 2
+        time shift: 3
+        time dev: 3
+        week shift: 2
+        week loc: 2
+        week dev: 1
+        time loc: 13.670305438967642
+        ip: False 
+    H: 
+        subtypes: 3
+        time shift: 1
+        time dev: 3
+        week shift: 0
+        week loc: 0
+        week dev: 1
+        time loc: 5.1077344941726786
+        ip: True 
+    I:  
+        subtypes: 8
+        time shift: 2
+        time dev: 3
+        week shift: 4
+        week loc: 4
+        week dev: 1
+        time loc: 9.420280013471066
+        ip: True 
+    J: 
+        subtypes: 3
+        time shift: 0
+        time dev: 3
+        week shift: 1
+        week loc: 1
+        week dev: 1
+        time loc: 0.3946242736447312
+        ip: False 
+    K: 
+        subtypes: 2
+        time shift: 1
+        time dev: 3
+        week shift: 0
+        week loc: 0
+        week dev: 1
+        time loc: 4.852774840150743
+        ip: False 
+    L: 
+        subtypes: 1
+        time shift: 2
+        time dev: 3
+        week shift: 0
+        week loc: 0
+        week dev: 1
+        time loc: 8.124366633042923
+        ip: False 
+    M: 
+        subtypes: 4
+        time shift: 2
+        time dev: 3
+        week shift: 4
+        week loc: 4
+        week dev: 1
+        time loc: 8.713128935705452
+        ip: True 
+    N: 
+        subtypes: 2
+        time shift: 0
+        time dev: 3
+        week shift: 1
+        week loc: 1
+        week dev: 1
+        time loc: 3.8168150551002196
+        ip: True 
+    O: 
+        subtypes: 2
+        time shift: 3
+        time dev: 3
+        week shift: 4
+        week loc: 4
+        week dev: 1
+        time loc: 14.92041035740151
+        ip: False 
+    P: 
+        subtypes: 5
+        time shift: 4
+        time dev: 3
+        week shift: 3
+        week loc: 3
+        week dev: 1
+        time loc: 16.710404369666534
+        ip: True 
+    Q: 
+        subtypes: 6
+        time shift: 1
+        time dev: 3
+        week shift: 3
+        week loc: 3
+        week dev: 1
+        time loc: 7.383935806161164
+        ip: True 
+    R: 
+        subtypes: 7
+        time shift: 2
+        time dev: 3
+        week shift: 0
+        week loc: 0
+        week dev: 1
+        time loc: 10.125994258811753
+        ip: True 
+    S: 
+        subtypes: 2
+        time shift: 3
+        time dev: 3
+        week shift: 1
+        week loc: 1
+        week dev: 1
+        time loc: 13.9991249603621
+        ip: True 
+    T: 
+        subtypes: 8
+        time shift: 3
+        time dev: 3
+        week shift: 5
+        week loc: 5
+        week dev: 1
+        time loc: 14.26633465557214
+        ip: True 
+    U: 
+        subtypes: 5
+        time shift: 4
+        time dev: 3
+        week shift: 0
+        week loc: 0
+        week dev: 1
+        time loc: 16.29183511756117
+        ip: True 
+    V: 
+        subtypes: 1
+        time shift: 0
+        time dev: 3
+        week shift: 6
+        week loc: 6
+        week dev: 1
+        time loc: 3.446675103581314
+        ip: False 
+    X: 
+        subtypes: 7
+        time shift: 1
+        time dev: 3
+        week shift: 4
+        week loc: 4
+        week dev: 1
+        time loc: 4.485259239804089
+        ip: True 
+    Z: 
+        subtypes: 2
+        time shift: 5
+        time dev: 3
+        week shift: 5
+        week loc: 5
+        week dev: 1
+        time loc: 22.83152745746565
+        ip: True
+     
+############# Priority Levels #############
+priority_levels: 
+    - low 
+    - medium
+    - high
+    - critical
+
+############# IPs #############
+ips_pool: 
+    - IPv4Address
+    - IPv6Address
+
+############# Areas #############
+dataset_field_pool: 
+    - Cybersecurity
+    - Finance
+    - Health
+    - Education
+ 
+############# Areas #############
+start_date: "10-01-2020 1:30:00"
+end_date: "31-12-2020 4:50:00"

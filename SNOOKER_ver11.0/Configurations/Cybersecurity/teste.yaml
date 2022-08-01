@@ -1,0 +1,434 @@
+analysts_info:
+  L1:
+    testtehe:
+      days off:
+      - Wednesday
+      - Saturday
+      end: 08:00
+      free: true
+      init: 00:00
+      shift: 0
+      speed: 1.0
+      ticket endtime: None
+      ticket starttime: None
+  L2:
+    lmsvkldsv:
+      days off:
+      - Wednesday
+      - Saturday
+      end: 08:00
+      free: true
+      init: 00:00
+      shift: 0
+      speed: 1.0
+      ticket endtime: None
+      ticket starttime: None
+  L3:
+    kslmvsmv:
+      days off:
+      - Wednesday
+      - Saturday
+      end: 08:00
+      free: true
+      init: 00:00
+      shift: 0
+      speed: 1.0
+      ticket endtime: None
+      ticket starttime: None
+  L4:
+    ld fldf:
+      days off:
+      - Wednesday
+      - Saturday
+      end: 08:00
+      free: true
+      init: 00:00
+      shift: 0
+      speed: 1.0
+      ticket endtime: None
+      ticket starttime: None
+day_stages:
+  afternoon:
+    end: '16:59'
+    start: '12:00'
+  evening:
+    end: '20:59'
+    start: '17:00'
+  morning:
+    end: '11:59'
+    start: 05:00
+  night:
+    end: 04:59
+    start: '21:00'
+end_date: 31-12-2020 4:50:00
+families:
+  A:
+    ip: true
+    subtypes: 3
+  B:
+    ip: false
+    subtypes: 6
+    time dev: 3
+    time loc: 12.415307421034893
+    time shift: 3
+    week dev: 1
+    week loc: 1
+    week shift: 1
+  C:
+    ip: true
+    subtypes: 8
+    time dev: 3
+    time loc: 19.31221087578001
+    time shift: 4
+    week dev: 1
+    week loc: 4
+    week shift: 4
+  D:
+    ip: true
+    subtypes: 6
+    time dev: 3
+    time loc: 17.997103913917503
+    time shift: 4
+    week dev: 1
+    week loc: 5
+    week shift: 5
+  E:
+    ip: true
+    subtypes: 6
+    time dev: 3
+    time loc: 0.5953141646896909
+    time shift: 0
+    week dev: 1
+    week loc: 4
+    week shift: 4
+  F:
+    ip: true
+    subtypes: 4
+    time dev: 3
+    time loc: 8.211828826174697
+    time shift: 2
+    week dev: 1
+    week loc: 5
+    week shift: 5
+  G:
+    ip: false
+    subtypes: 2
+    time dev: 3
+    time loc: 13.670305438967642
+    time shift: 3
+    week dev: 1
+    week loc: 2
+    week shift: 2
+  H:
+    ip: true
+    subtypes: 3
+    time dev: 3
+    time loc: 5.1077344941726786
+    time shift: 1
+    week dev: 1
+    week loc: 0
+    week shift: 0
+  I:
+    ip: true
+    subtypes: 8
+    time dev: 3
+    time loc: 9.420280013471066
+    time shift: 2
+    week dev: 1
+    week loc: 4
+    week shift: 4
+  J:
+    ip: false
+    subtypes: 3
+    time dev: 3
+    time loc: 0.3946242736447312
+    time shift: 0
+    week dev: 1
+    week loc: 1
+    week shift: 1
+  K:
+    ip: false
+    subtypes: 2
+    time dev: 3
+    time loc: 4.852774840150743
+    time shift: 1
+    week dev: 1
+    week loc: 0
+    week shift: 0
+  L:
+    ip: false
+    subtypes: 1
+    time dev: 3
+    time loc: 8.124366633042923
+    time shift: 2
+    week dev: 1
+    week loc: 0
+    week shift: 0
+  M:
+    ip: true
+    subtypes: 4
+    time dev: 3
+    time loc: 8.713128935705452
+    time shift: 2
+    week dev: 1
+    week loc: 4
+    week shift: 4
+  N:
+    ip: true
+    subtypes: 2
+    time dev: 3
+    time loc: 3.8168150551002196
+    time shift: 0
+    week dev: 1
+    week loc: 1
+    week shift: 1
+  O:
+    ip: false
+    subtypes: 2
+    time dev: 3
+    time loc: 14.92041035740151
+    time shift: 3
+    week dev: 1
+    week loc: 4
+    week shift: 4
+  P:
+    ip: true
+    subtypes: 5
+    time dev: 3
+    time loc: 16.710404369666534
+    time shift: 4
+    week dev: 1
+    week loc: 3
+    week shift: 3
+  Q:
+    ip: true
+    subtypes: 6
+    time dev: 3
+    time loc: 7.383935806161164
+    time shift: 1
+    week dev: 1
+    week loc: 3
+    week shift: 3
+  R:
+    ip: true
+    subtypes: 7
+    time dev: 3
+    time loc: 10.125994258811753
+    time shift: 2
+    week dev: 1
+    week loc: 0
+    week shift: 0
+  S:
+    ip: true
+    subtypes: 2
+    time dev: 3
+    time loc: 13.9991249603621
+    time shift: 3
+    week dev: 1
+    week loc: 1
+    week shift: 1
+  T:
+    ip: true
+    subtypes: 8
+    time dev: 3
+    time loc: 14.26633465557214
+    time shift: 3
+    week dev: 1
+    week loc: 5
+    week shift: 5
+  U:
+    ip: true
+    subtypes: 5
+    time dev: 3
+    time loc: 16.29183511756117
+    time shift: 4
+    week dev: 1
+    week loc: 0
+    week shift: 0
+  V:
+    ip: false
+    subtypes: 1
+    time dev: 3
+    time loc: 3.446675103581314
+    time shift: 0
+    week dev: 1
+    week loc: 6
+    week shift: 6
+  X:
+    ip: true
+    subtypes: 7
+    time dev: 3
+    time loc: 4.485259239804089
+    time shift: 1
+    week dev: 1
+    week loc: 4
+    week shift: 4
+  Z:
+    ip: true
+    subtypes: 2
+    time dev: 3
+    time loc: 22.83152745746565
+    time shift: 5
+    week dev: 1
+    week loc: 5
+    week shift: 5
+family_time_4h:
+  0:
+    end: 04:00
+    prob: 0.1
+    start: 00:00
+  1:
+    end: 08:00
+    prob: 0.1
+    start: 04:00
+  2:
+    end: '12:00'
+    prob: 0.2
+    start: 08:00
+  3:
+    end: '16:00'
+    prob: 0.25
+    start: '12:00'
+  4:
+    end: '20:00'
+    prob: 0.25
+    start: '16:00'
+  5:
+    end: '23:59'
+    prob: 0.1
+    start: '20:00'
+incident_area:
+  Cybersecurity:
+    0:
+      prob: 0.0410958904109589
+      type: Abusive Content
+    1:
+      prob: 0.06164383561643835
+      type: Availability
+    2:
+      prob: 0.1815068493150685
+      type: Information Gathering
+    3:
+      prob: 0.03767123287671233
+      type: Information Security
+    4:
+      prob: 0.17123287671232876
+      type: Intrusion Attempts
+    5:
+      prob: 0.11301369863013698
+      type: Intrusions
+    6:
+      prob: 0.07876712328767123
+      type: Malicious Code
+    7:
+      prob: 0.00684931506849315
+      type: Undefined
+    8:
+      prob: 0.3082191780821918
+      type: No Area
+ips_pool:
+- IPv4Address
+- IPv6Address
+priority_levels:
+- low
+- medium
+- high
+- critical
+shifts:
+  0:
+    end: 08:00
+    start: 00:00
+  1:
+    end: '16:00'
+    start: 08:00
+  2:
+    end: 00:00
+    start: '16:00'
+standard_generation_parameters:
+  families_number: 24
+  maxsubfamilies_number: 5
+  maxsubtechniques_number: 3
+  minsubfamilies_number: 1
+  minsubtechniques_number: 2
+  techniques_number: 5
+  ticket_number: 1000
+start_date: 10-01-2020 1:30:00
+suspicious_countries:
+  Angola:
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+    end: 07:00
+    start: '22:00'
+  Brazil:
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+    end: 07:00
+    start: '22:00'
+  Canada:
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+    end: 07:00
+    start: '22:00'
+  Colombia:
+    dayoff:
+    - Monday
+    - Wednesday
+    - Thursday
+    end: 07:00
+    start: '23:00'
+  Mozambique:
+    dayoff:
+    - Monday
+    - Tuesday
+    - Thursday
+    end: 08:00
+    start: '22:00'
+  Portugal:
+    dayoff:
+    - Monday
+    - Tuesday
+    - Friday
+    end: 07:00
+    start: '22:00'
+teams_freq:
+  L1: 0.25
+  L2: 0.25
+  L3: 0.25
+  L4: 0.25
+teams_info_pool:
+  L1:
+  - testtehe
+  L2:
+  - lmsvkldsv
+  L3:
+  - kslmvsmv
+  L4:
+  - ld fldf
+week_days:
+  0:
+    day: Monday
+    prob: 0.3
+  1:
+    day: Tuesday
+    prob: 0.1
+  2:
+    day: Wednesday
+    prob: 0.1
+  3:
+    day: Thursday
+    prob: 0.1
+  4:
+    day: Friday
+    prob: 0.1
+  5:
+    day: Saturday
+    prob: 0.2
+  6:
+    day: Sunday
+    prob: 0.1

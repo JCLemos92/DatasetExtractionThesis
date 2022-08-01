@@ -1,0 +1,14 @@
+Simple MetaFeature Analysis of file in /Users/joaolemos/DatasetGen/Output/generatedDatasets/200.csv at 2022-07-04 12:10:25.406501.
+attr_to_inst                                                  0.12437810945273632
+cat_to_num                                                     3.1666666666666665
+freq_class.mean                                              0.004975124378109452
+freq_class.sd                                                8.69527438583105e-19
+inst_to_attr                                                                 8.04
+nr_attr                                                                        25
+nr_bin                                                                          5
+nr_cat                                                                         19
+nr_class                                                                      201
+nr_inst                                                                       201
+nr_num                                                                          6
+num_to_cat                                                     0.3157894736842105
+Analysis took 0:00:00.127628.

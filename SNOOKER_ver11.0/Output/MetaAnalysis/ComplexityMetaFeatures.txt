@@ -1,0 +1,37 @@
+Complexity MetaFeature Analysis of file in /Users/joaolemos/DatasetGen/Output/generatedDatasets/200.csv at 2022-07-04 12:10:36.142903.
+c1                                                                            1.0
+c2                                                         -2.220446049250313e-16
+cls_coef                                                                      1.0
+density                                                                       1.0
+f1.mean                                                                       0.0
+f1.sd                                                                         0.0
+f1v.mean                                                                      nan
+f1v.sd                                                                        nan
+f2.mean                                                                       nan
+f2.sd                                                                         nan
+f3.mean                                                                       0.0
+f3.sd                                                                         0.0
+f4.mean                                                                       0.0
+f4.sd                                                                         0.0
+hubs.mean                                                      0.9950248756218906
+hubs.sd                                                       0.07053456158585983
+l1.mean                                                                       0.0
+l1.sd                                                                         0.0
+l2.mean                                                                       0.0
+l2.sd                                                                         0.0
+l3.mean                                                                       0.0
+l3.sd                                                                         0.0
+lsc                                                            0.9950248756218906
+n1                                                                            1.0
+n2.mean                                                                       1.0
+n2.sd                                                                         0.0
+n3.mean                                                                       1.0
+n3.sd                                                                         0.0
+n4.mean                                                                       0.0
+n4.sd                                                                         0.0
+t1.mean                                                       0.08333333333333333
+t1.sd                                                          0.2714407982010927
+t2                                                              6.189054726368159
+t3                                                           0.004975124378109453
+t4                                                          0.0008038585209003215
+Analysis took 0:05:53.418264.
